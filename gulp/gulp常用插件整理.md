@@ -1,0 +1,19 @@
+##### gulp常用插件整理
+- gulp-load-plugins --加载gulp插件
+- gulp-concat  --文件合并
+- gulp-rename  --文件重命名
+- gulp-clean  --删除文件/文件夹
+- del  --文件删除
+- gulp-uglify  --js压缩
+- gulp-babel  --js编译
+- gulp-clean-css  --css压缩
+- gulp-less  --less编译
+- gulp-sass  --sass编译
+- gulp-autoprefixer  --添加css3前缀
+- gulp-htmlmin  --html压缩
+- gulp-imagemin --图片压缩
+- browser-sync   --浏览器同步刷新
+- gulp-livereload  --刷新浏览器
+- gulp-connect  --启动一个本地服务
+- open  --自动打开页面
+- gulp-if  --是否运行插件
