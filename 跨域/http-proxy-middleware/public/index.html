@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div">
+        点击请求
+    </div>
+    <img id="img" src="" alt="">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $.post('/api/Common/GetAreaContextByCity',{
+            "city": "北京市",
+            "isGetAll": true,
+            "type": 0,
+            "orderType": 0
+        },function(res){
+            console.log(res)
+        })
+
+        
+        // fetch请求
+      
+        document.querySelector('#div').addEventListener('click',function(){
+            fetch('/api/Common/GetAreaContextByCity',{
+                method:'post',
+                body:JSON.stringify({
+                    "city": "北京市",
+                    "isGetAll": true,
+                    "type": 0,
+                    "orderType": 0
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(res=>{
+                return res.json()
+            }).then(v=>{
+                document.querySelector('#img').src = v.result.carDataInfo[0].picture
+            })
+        })
+    </script>
+</body>
+</html>
