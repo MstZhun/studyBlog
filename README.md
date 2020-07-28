@@ -1,6 +1,5 @@
-# 
-
-```mermaid
+```
+​```mermaid
 %% 语法示例
         gantt
         dateFormat  YYYY-MM-DD
@@ -20,5 +19,6 @@
         功能测试                              :active, a1, after des3, 3d
         压力测试                               :after a1  , 20h
         测试报告                               : 48h
+​```
 ```
 
