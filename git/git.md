@@ -51,3 +51,21 @@
         :wq 保存退出
         set nu 设置行数
 
+#### git操作最基本流程
+    创建工作目录，对工作目录进行修改
+    git add ./
+        git hash-object -w 文件名 （修改了多少个工作目录中的文件，此命令就要被执行多少次）
+        git update-index ... (暂存区)
+    git commit -m '注释'
+        git write-tree
+        git commit-tree
+
+#### git高层命令
+    git init                初始化仓库
+    git status              查看文件状态
+    git diff                查看哪些修改还没有暂存
+    git diff --staged       查看哪些更新暂存了还没有提交
+    git add ./              将修改添加到暂存区
+    git commit -m '注释'（注释少的时候用-m）     将暂存区提交到版本库
+    git commit -a -m （跳过暂存区）
+    git diff --cached（git diff --staged 1.61以上）       有哪些更新已经暂存以来准备下次提交
