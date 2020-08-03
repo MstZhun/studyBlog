@@ -66,6 +66,16 @@
     git diff                查看哪些修改还没有暂存
     git diff --staged       查看哪些更新暂存了还没有提交
     git add ./              将修改添加到暂存区
+    git rm 文件名            删除工作目录中对应的文件，再将修改添加到缓存区
+    git mv 原文件名 新文件名   将工作目录相应文件重命名，再将修改添加到缓存区
     git commit -m '注释'（注释少的时候用-m）     将暂存区提交到版本库
     git commit -a -m （跳过暂存区）
     git diff --cached（git diff --staged 1.61以上）       有哪些更新已经暂存以来准备下次提交
+    git log --pretty=oneline （--oneline）               查看提交记录（q键退出）
+
+#### git高层命令（分支）
+    git branch                 显示分支列表
+    git branch 分支名           创建分支
+    git checkout 分支名         切换分支
+    git branch -d 分支名        删除分支（切换到master分支在使用此命令，-D强制删除）
+    git branch -v              查看每个分支的最后一次提交
