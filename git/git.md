@@ -79,3 +79,20 @@
     git checkout 分支名         切换分支
     git branch -d 分支名        删除分支（切换到master分支在使用此命令，-D强制删除）
     git branch -v              查看每个分支的最后一次提交
+    git log --oneline --decorate --graph --all   查看所有分支历史
+    git config --global alias.别名 ”指令（git后面的，不包括git，一个单词不需要加双引号）“    配置指令别名
+
+#### git底层命令
+    git对象：
+        git hash-object -w fileUrl ：生成一个key（hash，唯一）:val（压缩过的文件内容），存到.git/objects文件
+    tree对象：
+        git update-index --add --cacheinfo 100644 hash test.text：往暂存区添加一条记录（让git对象对应上文件名），存到.git/index
+        git write tree：生成树对象，存到.git/objects文件
+    commit对象：
+        echo “first commit” | git commit-tree treeHash：生成一个提交对象，存到.git/objects文件
+    对以上对象查询：
+        git cat-file -p hash：拿对应对象内容
+        git cat-file -t hash：拿对应对象数据类型
+
+#### 查看暂存区
+    git ls-files -s
