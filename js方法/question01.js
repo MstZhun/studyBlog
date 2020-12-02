@@ -107,23 +107,74 @@
 
 // console.log(whichEvent)
 
-function hi(name,age,school){
-    return `您好！我是${name},${age}岁，毕业于${school}`
-}
-function curry(fn){
-    const len = fn.length
-    console.log(len)
-    return function inner(){
-        let _arg = [...arguments]
-        console.log(_arg,len)
-        if(_arg.length >= len){
-            return fn(..._arg)
-        }else{
-            return function(){
-                return inner(..._arg,...arguments)
-            }
-        }
+// function hi(name,age,school){
+//     return `您好！我是${name},${age}岁，毕业于${school}`
+// }
+// function curry(fn){
+//     const len = fn.length
+//     console.log(len)
+//     return function inner(){
+//         let _arg = [...arguments]
+//         console.log(_arg,len)
+//         if(_arg.length >= len){
+//             return fn(..._arg)
+//         }else{
+//             return function(){
+//                 return inner(..._arg,...arguments)
+//             }
+//         }
+//     }
+// }
+// let c =  curry(hi)
+// console.log(c('小明')('20')('清华'))
+
+
+// let a = new Promise((rev,rej)=>{
+//     console.log('star')
+//     rej('999')
+//     console.log('end')
+// })
+// a.then(r=>{
+//     console.log('--1')
+// },err=>{
+//     console.log(err)
+// }).catch(err=>{
+//     console.log('999' + err)
+// })
+
+// class A {
+//     c() {
+//       return 2;
+//     }
+//   }
+  
+//   class B extends A {
+//     constructor() {
+//       super();
+//       console.log(super.c()); // 2
+//     }
+//     c(){
+//         return 3
+//     }
+//   }
+//   let b = new B();
+
+class A {
+    constructor() {
+      this.x = 1;
     }
-}
-let c =  curry(hi)
-console.log(c('小明')('20')('清华'))
+  }
+  
+  class B extends A {
+    constructor() {
+      super();
+      this.x = 2;
+      super.x = 3;
+      console.log(super.x); // undefined
+      console.log(this.x); // 3
+    }
+  }
+  
+  let b = new B();
+  
+  

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右固定-中间自适应布局</title>
+</head>
+<style>
+    .box {
+	width: 400px;
+	height: 300px;
+	overflow: hidden;
+}
+ 
+.imgwraper {
+ 	width: 1200px;
+ 	animation: frames 5s ease-out infinite;
+}
+ 
+.img {
+	float: left;
+	width: 400px;
+	height: 300px;
+}
+ 
+@keyframes frames {
+	0%,25% {
+		margin-left: 0;
+	}
+	35%,60% {
+		margin-left: -400px;
+	}
+	70%, 100% {
+		margin-left: -800px;
+	}
+}
+</style>
+<body>
+
+<div class="box">
+	<div class="imgwraper">
+		<img src="./1.png" alt="">
+		<img src="./1.png" alt="">
+		<img src="./1.png" alt="">
+	</div>
+</div>
+
+    <script>
+    //     var x = 20
+    //     var obj = {
+    //     x: 10,
+    //     foo: function () {
+    //         console.log(this)   
+    //         let _this = this
+    //         function f(){
+    //             console.log(_this)
+    //             console.log(this);      //Window
+    //             console.log(this.x);    //20 
+    //             console.log(obj.x)  
+    //         };
+    //         f()
+    //     }
+    // }
+    // obj.foo()
+
+
+    // var obj = {name:'zj', 1:'27', 2:'female',length:6};
+    // var result = Array.from(obj);
+    // console.log(result)
+
+    function superPar(){
+        this.name = 'super'
+    }
+    superPar.prototype.getValue = function(){
+        return this.name
+    }
+    function subChil(){
+        this.age = 18
+    }
+    subChil.prototype = new superPar()
+    subChil.prototype = {
+       sex:'男',
+       getSubValue:function(){
+           return this.age
+       }
+    }
+    var a = new subChil()
+    console.log(a.getSubValue())
+    </script>
+</body>
+
+</html>

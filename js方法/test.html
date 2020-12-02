@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./promise.js"></script>
+    <script>
+        let a = new MyPromise((res,rej)=>{
+            res('hehe')
+        })
+        a.then(res=>{
+            console.log(res)
+        },err=>{
+            console.log(err,777)
+        })
+        console.log(9999)
+    </script>
+</body>
+</html>
