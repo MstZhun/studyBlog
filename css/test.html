@@ -8,86 +8,101 @@
 </head>
 <style>
     .box {
-	width: 400px;
-	height: 300px;
-	overflow: hidden;
-}
- 
-.imgwraper {
- 	width: 1200px;
- 	animation: frames 5s ease-out infinite;
-}
- 
-.img {
-	float: left;
-	width: 400px;
-	height: 300px;
-}
- 
-@keyframes frames {
-	0%,25% {
-		margin-left: 0;
-	}
-	35%,60% {
-		margin-left: -400px;
-	}
-	70%, 100% {
-		margin-left: -800px;
-	}
-}
-</style>
-<body>
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+    }
 
-<div class="box">
-	<div class="imgwraper">
-		<img src="./1.png" alt="">
-		<img src="./1.png" alt="">
-		<img src="./1.png" alt="">
-	</div>
-</div>
+    .imgwraper {
+        width: 1200px;
+        animation: frames 5s ease-out infinite;
+    }
+
+    .img {
+        float: left;
+        width: 400px;
+        height: 300px;
+    }
+
+    @keyframes frames {
+
+        0%,
+        25% {
+            margin-left: 0;
+        }
+
+        35%,
+        60% {
+            margin-left: -400px;
+        }
+
+        70%,
+        100% {
+            margin-left: -800px;
+        }
+    }
+</style>
+
+<body>
+    <div style="overflow: hidden;width: 300px;height: 200px;margin: 100px 200px;">
+        <div style="position: absolute;top: 20px;left: 20px;">8888</div>
+    </div>
+    <!-- <div style="height: 100px;width: 100px;float: left;background: lightblue">我是一个左浮动的元素</div>
+    <div style="width: 200px; height: 200px;background: #eee">我是一个没有设置浮动, 
+    也没有触发 BFC 元素, width: 200px; height:200px; background: #eee;</div> -->
+    <!-- <div class="box">
+        <div class="imgwraper">
+            <img src="./1.png" alt="">
+            <img src="./1.png" alt="">
+            <img src="./1.png" alt="">
+        </div>
+    </div> -->
 
     <script>
-    //     var x = 20
-    //     var obj = {
-    //     x: 10,
-    //     foo: function () {
-    //         console.log(this)   
-    //         let _this = this
-    //         function f(){
-    //             console.log(_this)
-    //             console.log(this);      //Window
-    //             console.log(this.x);    //20 
-    //             console.log(obj.x)  
-    //         };
-    //         f()
-    //     }
-    // }
-    // obj.foo()
+        //     var x = 20
+        //     var obj = {
+        //     x: 10,
+        //     foo: function () {
+        //         console.log(this)   
+        //         let _this = this
+        //         function f(){
+        //             console.log(_this)
+        //             console.log(this);      //Window
+        //             console.log(this.x);    //20 
+        //             console.log(obj.x)  
+        //         };
+        //         f()
+        //     }
+        // }
+        // obj.foo()
 
 
-    // var obj = {name:'zj', 1:'27', 2:'female',length:6};
-    // var result = Array.from(obj);
-    // console.log(result)
+        // var obj = {name:'zj', 1:'27', 2:'female',length:6};
+        // var result = Array.from(obj);
+        // console.log(result)
 
-    function superPar(){
-        this.name = 'super'
-    }
-    superPar.prototype.getValue = function(){
-        return this.name
-    }
-    function subChil(){
-        this.age = 18
-    }
-    subChil.prototype = new superPar()
-    subChil.prototype = {
-       sex:'男',
-       getSubValue:function(){
-           return this.age
-       }
-    }
-    var a = new subChil()
-    console.log(a.getSubValue())
+        // function superPar(){
+        //     this.name = 'super'
+        // }
+        // superPar.prototype.getValue = function(){
+        //     return this.name
+        // }
+        // function subChil(){
+        //     this.age = 18
+        // }
+        // subChil.prototype = new superPar()
+        // subChil.prototype = {
+        //    sex:'男',
+        //    getSubValue:function(){
+        //        return this.age
+        //    }
+        // }
+        // var a = new subChil()
+        // console.log(a.getSubValue())
+
+      
     </script>
+    <script src="./test.js"></script>
 </body>
 
 </html>

@@ -159,22 +159,27 @@
 //   }
 //   let b = new B();
 
-class A {
-    constructor() {
-      this.x = 1;
-    }
-  }
+// class A {
+//     constructor() {
+//       this.x = 1;
+//     }
+//   }
   
-  class B extends A {
-    constructor() {
-      super();
-      this.x = 2;
-      super.x = 3;
-      console.log(super.x); // undefined
-      console.log(this.x); // 3
-    }
-  }
+//   class B extends A {
+//     constructor() {
+//       super();
+//       this.x = 2;
+//       super.x = 3;
+//       console.log(super.x); // undefined
+//       console.log(this.x); // 3
+//     }
+//   }
   
-  let b = new B();
+//   let b = new B();
   
-  
+var arr = [0,2,4,6,8];
+var str = arr.map(function(item,index,arr2){
+console.log(item);arr.push(1)
+return item/2;});
+console.log(str);
+console.log(arr)
