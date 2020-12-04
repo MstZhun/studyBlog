@@ -177,9 +177,21 @@
   
 //   let b = new B();
   
-var arr = [0,2,4,6,8];
-var str = arr.map(function(item,index,arr2){
-console.log(item);arr.push(1)
-return item/2;});
-console.log(str);
-console.log(arr)
+// var arr = [0,2,4,6,8];
+// var str = arr.map(function(item,index,arr2){
+// console.log(item);arr.push(1)
+// return item/2;});
+// console.log(str);
+// console.log(arr)
+
+function isPromise(obj) {
+    return (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';  
+}
+let p1 = Promise.resolve(3);
+let p2 = 1337;
+let p3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 100, 'foo');
+}); 
+console.log(isPromise(p1))
+console.log(isPromise(p2))
+console.log(isPromise(p3))
