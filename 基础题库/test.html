@@ -5,7 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    main{
+        display: flex;
+        width: 200px;
+        height: 200px;
+    }
+    div{
+        height: 100px;
+    }
+    .box1{
+        flex: 1 1 1;
+        background: red;
+        width: 100px;
+
+    }
+    .box2{
+        flex: 1 1 2;
+        background: blue;
+        width: 200px;
+
+    }
+</style>
 <body>
+    <main>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </main>
     <script src="./事件循环-题.js"></script>
 </body>
 </html>

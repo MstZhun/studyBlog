@@ -28,3 +28,7 @@ function throttle(fn,wait){
 
     }
 }
+
+var arr = [5, 6, [1, 2], [3, 4, 5]]
+console.log(Array.prototype.concat.call([], arr));
+console.log(Array.prototype.concat.apply([], arr));
