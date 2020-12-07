@@ -8,30 +8,37 @@
 <style>
     main{
         display: flex;
-        width: 200px;
-        height: 200px;
+        height: 400px;
+        justify-content: space-between;
     }
-    div{
-        height: 100px;
-    }
+
     .box1{
-        flex: 1 1 1;
         background: red;
         width: 100px;
+        height: 100px;
+
 
     }
     .box2{
-        flex: 1 1 2;
         background: blue;
         width: 200px;
-
+        height: 100px;
+    }
+    .box3{
+        background: yellow;
+        width: 200px;
+        height: 100px;
     }
 </style>
 <body>
     <main>
-        <div class="box1"></div>
+        <div style="display: flex;">
+            <div class="box1"></div>
         <div class="box2"></div>
+        </div>
+        
+        <div class="box3"></div>
     </main>
-    <script src="./事件循环-题.js"></script>
+    <!-- <script src="./事件循环-题.js"></script> -->
 </body>
 </html>

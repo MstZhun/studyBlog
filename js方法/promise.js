@@ -55,3 +55,43 @@ class MyPromise {
     }
 }
 
+// promise all
+
+function promiseAll(arr){
+    if(!Array.isArray(arr)){
+        throw new Error("parmas must be an array!")
+    }
+    return new Promise((resolve,reject)=>{
+        let total = arr.length,
+            currentToal = 0,
+            values = new Array(total);
+        for(let i = 0; i < total; i++){
+           Promise.resolve(arr[i]).then(res=>{
+            values[i] = values
+            currentToal++
+            if(currentToal === total){
+                return resolve(values)
+            }
+           },err=>{
+                return reject(err)
+           })
+        }
+    })
+}
+
+// promise race
+
+function promiseRace(arr){
+    if(!Array.isArray(arr)){
+        throw new Error("parmas must be an array!")
+    }
+    return new Promise((resolve,reject)=>{
+        arr.forEach(ele=>{
+            Promise.resolve(ele).then(res=>{
+                resolve(res)
+            },err=>{
+                reject(err)
+            })
+        })
+    })
+}
