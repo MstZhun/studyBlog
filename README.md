@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #### charles下载
 
 下载地址：https://www.charlesproxy.com/latest-release/download.do
@@ -18,4 +19,7 @@
 1. appStore下载安装
 2. sudo /bin/chmod +a 'user:admin:allow write' /etc/hosts
 3. 编辑 ---> 测试 ---> 配置域名
+=======
+## 笔记
+>>>>>>> 7e4af5b98c2319b9f70490f014d7ff7b17afcef0
 
