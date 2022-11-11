@@ -38,6 +38,9 @@
 
 ```
 git merge --abort
+
+git add .
+git merge --continue // 解决冲突后继续合并
 ```
 
 

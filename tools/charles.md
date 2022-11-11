@@ -21,22 +21,5 @@
 
 ![image-20210610100516589](/Users/admin/Library/Application Support/typora-user-images/image-20210610100516589.png)
 
-#### iHosts
 
-编辑hosts$\longrightarrow$测试$\longrightarrow$配置域名
-
-```bash
-sudo /bin/chmod +a 'user:admin:allow write' /etc/hosts
-```
-
-
-
-```javascript
-127.12.1 local.xxxx.com
-
-# qa环境
-127.12.1 local.xxxx.com
-
-127.12.1 local.xxxx.com
-```
 
